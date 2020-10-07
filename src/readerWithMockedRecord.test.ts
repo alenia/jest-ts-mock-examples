@@ -2,22 +2,20 @@ import Reader from './reader'
 import Record from './record'
 
 jest.mock('./record')
-//const mockedRecord = new Record('baz') but cast to a mock
-jest.spyOn(Record.prototype, 'getRecords').mockImplementation(() => {
-  return []
-  // return [mockedRecord]
-})
+const MockedRecord = Record as jest.Mocked<typeof Record>;
+const mockRecord = new MockedRecord('bax');
+MockedRecord.getRecords.mockImplementation(() => [mockRecord]);
 
 describe('with getReaders', () => {
   it('returns one from the one method', () => {
     expect(Reader.getReaders()[0].one()).toEqual(1)
   })
 
-  /*
-  it('returns the id of the associated records', () => {
+  xit('returns the id of the associated records', () => {
+    //
+    //mockRecord.getId.mockImplementation(() => 'baz');
     expect(Reader.getReaders()[0].getRecordId()).toEqual('baz')
   })
-  */
 })
 
 /*
