@@ -9,7 +9,7 @@ export default class Record {
     return this.id;
   }
 
-  static getRecords() {
+  static getRecords() : Array<Record> {
     return [new Record('foo'), new Record('bar')]
   }
 }

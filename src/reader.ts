@@ -6,15 +6,15 @@ export default class Reader {
     this.record = record;
   }
 
-  getRecordId() {
+  getRecordId() : string {
     return this.record.getId();
   }
 
-  one() {
+  one() : number {
     return 1;
   }
 
-  static getReaders() {
+  static getReaders() : Array<Reader> {
     return Record.getRecords().map((record) => new Reader(record))
   }
 }
