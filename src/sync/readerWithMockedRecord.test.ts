@@ -11,9 +11,8 @@ describe('with getReaders', () => {
     expect(Reader.getReaders()[0].one()).toEqual(1)
   })
 
-  xit('returns the id of the associated records', () => {
-    //
-    //mockRecord.getId.mockImplementation(() => 'baz');
+  it('returns the id of the associated records', () => {
+    mockRecord.getId.mockImplementation(() => 'baz');
     expect(Reader.getReaders()[0].getRecordId()).toEqual('baz')
   })
 })
