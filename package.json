@@ -1,0 +1,15 @@
+{
+  "name": "jest-ts-mock-examples",
+  "version": "1.0.0",
+  "description": "Figuring out how to mock classes with static methods and constructors",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^26.5.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
